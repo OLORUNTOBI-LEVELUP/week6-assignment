@@ -1,0 +1,23 @@
+<!DOCTYPE html>>
+<html>
+    <head></head>
+    <body>
+        <h1 id="address">.......loading</h1>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script>
+                (function() {
+                    axios.get("https://pokeapi.co/api/v2/pokemon/ditto")
+                        .then(function(result){
+                            var name = result.data.name
+                            document.getElementById("address").innerHTML = name
+                        })
+                        .catch(function(error){
+                            console.log(error)
+
+                        })
+                    
+                })();
+            </script>
+    </body>
+
+</html>

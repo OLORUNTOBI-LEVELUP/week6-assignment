@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="address">.......coming soon</h1>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script type="application/javascript">
+                (function() {
+                    axios.get('https://swapi.co/api/people/1')
+                         .then(function(result) {
+                             var name = result.data.name
+                             document.getElementById("address").innerHTML = name
+
+                         })
+                         .catch(function(error) {
+                             console.error(error)
+                         })
+                })();
+            </script>
+    </body>
+</html>
